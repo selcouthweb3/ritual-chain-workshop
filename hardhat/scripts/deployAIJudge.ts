@@ -1,4 +1,4 @@
-import hre from "hardhat";
+import hre, { network } from "hardhat";
 import { parseEther } from "viem";
 import { writeFileSync } from "fs";
 import { join } from "path";
@@ -19,8 +19,12 @@ const RITUAL_WALLET_ABI = [
 ] as const;
 
 async function main() {
-  const publicClient = await hre.viem.getPublicClient();
-  const [deployer] = await hre.viem.getWalletClients();
+  // In Hardhat 3, viem clients come from network.connect(), not hre.viem
+  const conn = await network.connect();
+  const { viem } = conn;
+
+  const publicClient = await viem.getPublicClient();
+  const [deployer] = await viem.getWalletClients();
 
   console.log("Deployer:", deployer.account.address);
 
