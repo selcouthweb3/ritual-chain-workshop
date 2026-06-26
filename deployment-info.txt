@@ -1,0 +1,2 @@
+CONTRACT_ADDRESS=pending_deployment
+DEPLOYMENT_TX=pending_deployment
