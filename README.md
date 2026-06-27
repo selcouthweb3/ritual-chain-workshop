@@ -52,10 +52,13 @@ function finalizeWinner(uint256 bountyId, uint256 winnerIndex) external;
 
 ## Deployment
 
-See [deployment-info.txt](./deployment-info.txt) for contract address and deployment transaction.
-
 Network: Ritual testnet (Chain ID: 1979)
-RPC: https://rpc.ritualfoundation.org
+RPC: `https://rpc.ritualfoundation.org`
+
+| | |
+|---|---|
+| Contract address | `0x13449585c4f80c6fd91d8518c93c28d6d7a0fa7c` |
+| Deployment tx | `0x887a28cd70dea61056229705271164e3a070503e74fea84730351bae94773f9c` |
 
 ## Repository Structure
 
